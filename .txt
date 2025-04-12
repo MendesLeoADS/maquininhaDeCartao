@@ -1,0 +1,21 @@
+Comandos para compilar e executar a aplicação Java no Terminal :
+mvn clean install
+mvn exec:java -Dexec.mainClass="com.maquininhapagamento.App"
+
+Saída esperada no Terminal :
+Transações processadas:
+1: Transação [valor=50.0, tipoPagamento=CREDITO, dataHora=2025-04-12T17:44:43.611448200]
+2: Transação [valor=45.99, tipoPagamento=DEBITO, dataHora=2025-04-12T17:44:43.611448200]
+3: Transação [valor=13.99, tipoPagamento=QRCODE, dataHora=2025-04-12T17:44:43.611448200]
+
+QR Code gerado: PAGAMENTO: valor=100.0, id=42921d26-4554-4a2b-9e2f-a58b0f982d8a
+
+Consultando transações do tipo CREDITO:
+Transação [valor=50.0, tipoPagamento=CREDITO, dataHora=2025-04-12T17:44:43.611448200]
+
+Erro ao processar pagamento inválido: O valor da Transação deve ser maior que zero.
+
+Histórico das Transações processadas:
+Transação [valor=50.0, tipoPagamento=CREDITO, dataHora=2025-04-12T17:44:43.611448200]
+Transação [valor=45.99, tipoPagamento=DEBITO, dataHora=2025-04-12T17:44:43.611448200]
+Transação [valor=13.99, tipoPagamento=QRCODE, dataHora=2025-04-12T17:44:43.611448200]
