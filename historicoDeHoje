@@ -1,0 +1,6 @@
+Histórico de Transações
+====================================
+Transação [valor=15.75, tipoPagamento=CREDITO, dataHora=2025-04-13T20:17:11.335068]
+Transação [valor=400.0, tipoPagamento=DEBITO, dataHora=2025-04-13T20:17:17.724080100]
+Transação [valor=67.0, tipoPagamento=QRCODE, dataHora=2025-04-13T20:17:26.485858600]
+Transação [valor=13.6395, tipoPagamento=CREDITO, dataHora=2025-04-13T20:18:21.183289]
