@@ -10,10 +10,15 @@ import java.util.UUID;
 
 public class Maquininha {
     private final List<Transacao> historicoTransacoes;
-
+    private final String senha;
 
     public Maquininha(){
         this.historicoTransacoes = new ArrayList<>();
+        this.senha = "1234"; // Léo: Adicionei uma senha padrão para a maquininha.
+    }
+
+    public boolean verificarSenha(String senhaDigitada) {
+        return this.senha.equals(senhaDigitada);
     }
 
 
@@ -29,7 +34,7 @@ public class Maquininha {
     }
 
     // Léo: Adicionei o método para processar um Pagamento.
-    public Transacao processarPagamento(double valor, TipoPagamento tipoPagamento) {
+    public Transacao processarPagamento(double valor, TipoPagamento tipoPagamento, String senha) {
         double valorFinal = valor;
         if (tipoPagamento == TipoPagamento.CREDITO) {
             double taxa = valor * 0.05; // Taxa de 5% para crédito.
@@ -70,7 +75,7 @@ public class Maquininha {
 
 
     // Léo: Adicionei o método para cancelar transações.
-    public void cancelarTransacao(int indice) {
+    public void cancelarTransacao(int indice, String senha) {
         if (indice < 0 || indice >= historicoTransacoes.size() ) {
             throw new IllegalArgumentException("Índice inválido: " + indice);
         }
